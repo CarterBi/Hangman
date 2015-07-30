@@ -9,30 +9,32 @@ correct_guess = []
 
 fail = 10 
 
+win = 
 
-while fail > len(prev_guess):
-	while True:
-		print "Here are your good guesse(s)"
-		print correct_guess
-		print "Here are your wrong guesses."
-		print prev_guess
-		guess = raw_input("What letter do you guess?")
-		if (len(guess) != 1):
-			print "Invalid Answer."
+while 
+	while fail > len(prev_guess):
+		while True:
+			print "Here are your correct guesse(s)"
+			print correct_guess
+			print "Here are your wrong guesses."
+			print prev_guess
+			guess = raw_input("What letter do you guess?")
+			if (len(guess) != 1):
+				print "Invalid Answer."
+			else:
+				break
+
+		word = "bad"
+
+		guesses = word
+
+
+
+		if guess in guesses: 
+			print correct_guess
+			correct_guess.append(guess)
 		else:
-			break
-
-	word = "bad"
-
-	guesses = word
-
-
-
-	if guess in guesses: 
-		print correct_guess
-		correct_guess(guess)
-	else:
-		print "Try Again."
-		prev_guess.append(guess)
-		
-print "You Failed!!!"
+			print "Try Again."
+			prev_guess.append(guess)
+			
+	print "You Failed!!!"
