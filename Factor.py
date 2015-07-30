@@ -17,4 +17,7 @@ for i in rev_factors:
 		factors.append(new_factor)
 
 
-print factors
+for f in factors:
+	print f
+
+print "There are %d factor(s) for the number %d." % (len(factors), x)
