@@ -1,14 +1,40 @@
+import random
 
 name = raw_input("What is your name? ")
 
 print "Hello," + name+"! Time to play hangman!"
 
 prev_guess = []
-word = "rain"
+word = []
 
-guesses = word
+word.append("apple")
+word.append("pie")
+word.append("minecraft")
+word.append("hangman")
+word.append("steam")
+word.append("mail")
+word.append("ninja")
+word.append("combat")
+word.append("rain")
+word.append("lava")
+word.append("park")
+word.append("bow")
+word.append("arrow")
+word.append("page")
+word.append("phone")
+word.append("pizza")
+word.append("charger")
+word.append("pokemon")
+word.append("water")
+word.append("naruto")
+word.append("house")
 
-num = len(word)
+
+x = random.randint(0,len(word)-1)
+
+correct = word[x]
+
+num = len(correct)
 correct_guess = ["_"] * num
 
 
@@ -31,18 +57,19 @@ while fail > len(prev_guess) and "_" in correct_guess:
 
 	# print display
 
-	if guess in guesses: 
+	if guess in correct: 
 		# print correct_guess
 		# correct_guess.append(guess)
 		for i in range(num):
-			if word[i] == guess:
+			if correct[i] == guess:
 				correct_guess[i] = guess
 	else:
 		print "Try Again."
 		prev_guess.append(guess)
 
 
-if fail < len(prev_guess):
+if fail <= len(prev_guess):
 	print "You Failed!!!"
 else: 
 	print "Congratulations!"
+print "The correct word was " + word[x] + "!"
