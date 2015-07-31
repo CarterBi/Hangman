@@ -20,4 +20,4 @@ for i in rev_factors:
 for f in factors:
 	print f
 
-print "There are %d factor(s) for the number %d." % (len(factors), x)
+print "There are %d factors for the number %d." % (len(factors), x)
